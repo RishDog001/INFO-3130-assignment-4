@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EventPal</title>
+    <script src="_lib/js/lib/jquery-2.1.4.js"></script>
+    <script src="_lib/js/lib/jquery.mobile-1.4.5.js"></script>
+    <script src="_lib/js/lib/jquery.validate.js"></script>
+    <script src="_lib/js/lib/validateForm.js" type="text/javascript"></script>
+    <script src="_lib/js/lib/validation.js" type="text/javascript"></script>
+    <script src="_lib/js/lib/global.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="_lib/css/lib/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css" href="_lib/css/mystyle.css">
+</head>
+<body>
+    <div id="registrationPage" data-role="page">
+        <header data-role="header" data-position="fixed" data-theme="b">
+            <h1>Register</h1>
+            <nav data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homePage" data-icon="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#eventPage" data-icon="calendar">Event Registration</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <form id="registrationForm" method="post">
+                <label for="txtUserName">Username: </label>
+                <input type="text" id="txtUserName" name="txtUserName" data-clear-btn="false">
+                <label for="txtEmail">Email Address: </label>
+                <input type="email" id="txtEmail" name="txtEmail">
+                <label for="txtPhoneNumber">Phone Number: </label>
+                <input type="tel" id="txtPhoneNumber" name="txtPhoneNumber">
+                <label for="txtDOB">Date of Birth: </label>
+                <input type="date" id="txtDOB" name="txtDOB">
+                <label for="txtUserPassword">Password: </label>
+                <input type="password" id="txtUserPassword" name="txtUserPassword">
+                <p>Select your Gender</p>
+                <label for="radioButton1">Male</label>
+                <input type="radio" id="radioButton1" name="radioButton1" style="display: block" checked="checked">
+                <label for="radioButton2">Female</label>
+                <input type="radio" id="radioButton2" name="radioButton2" style="display: block">
+                <p>Select your Hobbies</p>
+                <label for="checkbox1">Travel</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1" style="display: block">
+                <label for="checkbox2">Music</label>
+                <input type="checkbox" id="checkbox2" name="checkbox2" style="display: block">
+                <label for="checkbox3">Sports</label>
+                <input type="checkbox" id="checkbox3" name="checkbox3" style="display: block">
+            </form>
+            <a href="#loginPage" onclick="RegistrationForm()" data-role="button" class="ui-btn-active" data-theme="a">Proceed to Login Page</a>
+            <button type="reset" class="ui-btn">Reset</button>
+        </section>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <h1>&copy; 2023 Rish Naik</h1>
+        </footer>
+    </div>
+    <div id="loginPage" data-role="page">
+        <header data-role="header" data-position="fixed" data-theme="b">
+            <h1>Login</h1>
+            <nav data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homePage" data-icon="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#eventPage" data-icon="calendar">Event Registration</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <h2>Sign in to your account</h2>
+            <form id="loginForm" method="post">
+                <label for="txtName">Username: </label>
+                <input type="text" id="txtName" name="txtName" data-clear-btn="false">
+                <label for="txtPassword">Password: </label>
+                <input type="password" id="txtPassword" name="txtPassword">
+                <a href="#homePage" onclick="LoginForm()" class="ui-btn-active" data-role="button" data-theme="a">Login</a>
+            </form>
+        </section>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <h1>&copy; 2023 Rish Naik</h1>
+        </footer>
+    </div>
+    <div id="homePage" data-role="page">
+        <header data-role="header" data-position="fixed" data-theme="b">
+            <h1>Home</h1>
+            <nav data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homePage" data-icon="home" class="ui-btn-active ui-state-persist">Home</a>
+                    </li>
+                    <li>
+                        <a href="#eventPage" data-icon="calendar">Event Registration</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <img src="_lib/img/movie-ticket-icon-vector.jpg" alt="ticket logo">
+            <h3>Welcome to EventPal, a new way of purchasing tickets for your favorite event!</h3>
+            <p style="margin: 0;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor earum, eos excepturi incidunt
+                inventore molestiae ratione repudiandae sunt voluptate? Cupiditate eligendi,
+                iste laboriosam mollitia placeat porro quas quis rem vitae.
+            </p>
+        </section>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <h1>&copy; 2023 Rish Naik</h1>
+        </footer>
+    </div>
+    <div id="eventPage" data-role="page">
+        <header data-role="header" data-position="fixed" data-theme="b">
+            <h1>Register for an event</h1>
+            <nav data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homePage" data-icon="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#eventPage" data-icon="calendar" class="ui-btn-active ui-state-persist">Event Registration</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <img src="_lib/img/movie-ticket-icon-vector.jpg" alt="ticket logo">
+            <h3>Choose an event from the list below</h3>
+            <form id="eventForm" method="post">
+                <label for="eventList">Events</label>
+                <select id="eventList" name="eventList" data-native-menu="false" data-iconpos="left">
+                    <option value="Music Concert" selected>Music Concert</option>
+                    <option value="Football Game">Football Game</option>
+                    <option value="Baseball Game">Baseball Game</option>
+                    <option value="Hockey Game">Hockey Game</option>
+                </select>
+                <label for="txtTickets">No of tickets: </label>
+                <input type="number" id="txtTickets">
+                <label for="txtEventDate">Choose your Date: </label>
+                <input type="date" id="txtEventDate" name="txtEventDate">
+            </form>
+            <a href="#checkoutPage" onclick="EventForm()" data-role="button" id="checkoutBtn" class="ui-btn-active" data-theme="a">Proceed to Checkout</a>
+        </section>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <h1>&copy; 2023 Rish Naik</h1>
+        </footer>
+    </div>
+    <div id="checkoutPage" data-role="page">
+        <header data-role="header" data-position="fixed" data-theme="b">
+            <h1>Checkout</h1>
+            <nav data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#homePage" data-icon="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#eventPage" data-icon="calendar">Event Registration</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section data-role="content">
+            <img src="_lib/img/movie-ticket-icon-vector.jpg" alt="ticket logo">
+            <h3>Checkout</h3>
+            <form id="checkoutForm" method="post">
+                <label for="txtName1">Name: </label>
+                <input type="text" id="txtName1">
+                <label for="txtAddress">Street Address: </label>
+                <input type="text" id="txtAddress">
+                <label for="txtEmail1">Email Address: </label>
+                <input type="email" id="txtEmail1" name="txtEmail">
+                <label for="txtPhoneNumber1">Phone Number: </label>
+                <input type="tel" id="txtPhoneNumber1" name="txtPhoneNumber1">
+                <label for="provincesList">Select your Province</label>
+                <select id="provincesList" name="provincesList" data-native-menu="false" data-iconpos="left">
+                    <option value="Ontario" selected>Ontario</option>
+                    <option value="Alberta">Alberta</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="Saskatchewan">Saskatchewan</option>
+                    <option value="Manitoba">Manitoba</option>
+                    <option value="Quebec">Quebec</option>
+                    <option value="Nova Scotia">Nova Scotia</option>
+                    <option value="New Brunswick">New Brunswick</option>
+                    <option value="Newfoundland">Newfoundland and Labrador</option>
+                    <option value="PEI">Prince Edward Island</option>
+                </select>
+                <label for="txtPostalCode">Postal Code: </label>
+                <input type="text" id="txtPostalCode">
+                <label for="radioButtonCard1">Mastercard</label>
+                <input type="radio" id="radioButtonCard1" checked="checked">
+                <label for="radioButtonCard2">Visa</label>
+                <input type="radio" id="radioButtonCard2">
+                <label for="radioButtonCard3">Debit</label>
+                <input type="radio" id="radioButtonCard3">
+                <label for="txtCardNumber">Card Number: </label>
+                <input type="number" id="txtCardNumber">
+                <label for="txtExpiryDate">Expiry Date: </label>
+                <input type="date" id="txtExpiryDate">
+                <label for="txtCVV">CVV: </label>
+                <input type="number" id="txtCVV">
+            </form>
+            <button type="button" onclick="CheckoutForm()" id="checkoutButton" name="checkoutButton" class="ui-btn-active" data-theme="a">Checkout</button>
+            <button type="reset" class="ui-btn">Reset</button>
+        </section>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <h1>&copy; 2023 Rish Naik</h1>
+        </footer>
+    </div>
+</body>
+</html>
